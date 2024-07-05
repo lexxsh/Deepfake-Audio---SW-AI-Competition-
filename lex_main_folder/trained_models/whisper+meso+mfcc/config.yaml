@@ -1,0 +1,15 @@
+checkpoint:
+  path: "whisper_mfcc_mesonet_finetuned/weights.pth"
+data:
+  seed: 42
+model:
+  name: whisper_frontend_mesonet
+  optimizer:
+    lr: 1.0e-06
+    weight_decay: 0.0001
+  parameters:
+    fc1_dim: 1024
+    freeze_encoder: false
+    frontend_algorithm:
+    - mfcc
+    input_channels: 2
